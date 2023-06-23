@@ -7,47 +7,83 @@
     </script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <style>
+      * body{
+          background-color: #1f1f1f;
+          color: white;
+          font-family: 'Poppins', sans-serif;
+      }
+      .btn{
+        background-color: #ff4646;
+        border-color:#ff4646;
+      }
+      .btn:hover{
+        background-color: #ff46468c;
+        border-color:#ff46468c;
+      }
+      .btn:active{
+        background-color: #ff46468c;
+        border-color:#ff46468c;
+      }
+      @media(max-width:500px){
+        .row{
+        flex-direction:column ;
+      }
+      }
+      
+    </style>
   </head>
   <body class="container mt-5">
-    <label >Choose Frame</label>
-    <select id = "twibbonimg" class="form-select">
-      <option value="teacherday.png">Teacher Day</option>
-      <option value="youthchildrenday.png">Youth Children Day</option>
-      <option value="bicycleday.png">Bicycle Day</option>
-    </select>
-    <br>
-    <div class="form-group">Photo 
-      <input class="form-control" type="file" id="photoimg" value=""> 
-    </div>
-    <div class="row mt-3">
+    <div class="row">
       <div class="col">
-        Width <input type="text" class="form-control"id = "width" value="100%">
-      </div>  
-      <div class="col">
-        Height <input type="text" class="form-control" id = "height" value="auto">
-      </div>  
-      <div class="col">  
-        Top <input type="text" class="form-control" id = "top" value="0px">
+        <label >Choose Frame</label>
+        <select id = "twibbonimg" class="form-select">
+          <option value="img/teacherday.png">Teacher Day</option>
+          <option value="img/youthchildrenday.png">Youth Children Day</option>
+          <option value="img/bicycleday.png">Bicycle Day</option>
+        </select>
+     </div>
+      <div class="form-group col">Photo 
+        <input class="form-control" type="file" id="photoimg" value=""> 
       </div>
-      <div class="col">  
-        Left <input type="text" class="form-control" class="form-control" id = "left" value="0px">
-      </div> 
     </div>
-    <hr>
+      <div class="row mt-3">
+        <div class="col">
+          Width <input type="text" class="form-control"id = "width" value="100%">
+        </div>  
+        <div class="col">
+          Height <input type="text" class="form-control" id = "height" value="auto">
+        </div>
+      
+        <div class="col">  
+          Top <input type="text" class="form-control" id = "top" value="0px">
+        </div>
+        <div class="col">  
+          Left <input type="text" class="form-control" class="form-control" id = "left" value="0px">
+        </div> 
+        </div>
+      </div>
+    </div>
+    
 
-    <div class="cards">
-      <h2>Pick A Photo</h2>
-      <div class="twibbon">
+    <div class="cards mt-5">
+      <h2>Make Your Photo</h2>
+      <div class="twibbon mt-3">
         <img src=""  id = "twibbon" alt="">
         <img src=""  id = "photo" alt="">
       </div>
-      <div class="text-center">
+      <div class="text-center mb-5">
       <a href="#" id ="download" class="btn btn-primary mt-5">Download</a>
       </div>
     </div>
+
+ 
  
 
 <script type="text/javascript">
