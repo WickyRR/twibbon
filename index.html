@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
       * body{
-          background-color: white;
+          background: #f7f7f7;
           color: black;
           font-family: 'Poppins', sans-serif;
       }
@@ -36,75 +36,73 @@
       @media (max-width:500px){
         .row{
         flex-direction:column ;
+        }
+        .cards .twibbon{
+          width: 300px;
+          width: 300px;
+          margin: auto;
+          position: relative;
+          overflow: hidden;
+        }
+        .cards{
+          width: 300px;
+          margin: auto;
+        }
       }
-      .cards .twibbon{
-        width: 300px;
-        width: 300px;
-        margin: auto;
-        position: relative;
-        overflow: hidden;
-      }
-      .cards{
-        width: 300px;
-        margin: auto;
-      }
-      }
-      
     </style>
   </head>
-  <body class="container">
+  <body>
     <div class="nav">
       <img src="img/logo.png" alt="">
     </div>
-    <div class="row mt-4">
-      <div class="col">
-        <label >Choose Frame</label>
-        <select id = "twibbonimg" class="form-select">
-          <option value="img/teacherday.png">Teacher Day</option>
-          <option value="img/youthchildrenday.png">Youth Children Day</option>
-          <option value="img/bicycleday.png">Bicycle Day</option>
-        </select>
-     </div>
-     
-      <div class="form-group col">Photo 
-        <input class="form-control" type="file" id="photoimg" value=""> 
+    <div class="container mt-5">
+        <div class="col">
+          <label >Choose Frame</label>
+          <select id = "twibbonimg" class="form-select">
+            <option value="teacherday.png">Teacher Day</option>
+            <option value="youthchildrenday.png">Youth Children Day</option>
+            <option value="bicycleday.png">Bicycle Day</option>
+          </select>
       </div>
-    </div>
-    <!--
-      <div class="row mt-3">
-        <div class="col">
-          Width <input type="text" class="form-control"id = "width" value="100%">
-        </div>  
-        <div class="col">
-          Height <input type="text" class="form-control" id = "height" value="auto">
-        </div>
       
-        <div class="col">  
-          Top <input type="text" class="form-control" id = "top" value="0px">
+        <div class="form-group col">Photo 
+          <input class="form-control" type="file" id="photoimg" value=""> 
         </div>
-        <div class="col">  
-          Left <input type="text" class="form-control" class="form-control" id = "left" value="0px">
-        </div> 
+      </div>
+      <!--
+        <div class="row mt-3">
+          <div class="col">
+            Width <input type="text" class="form-control"id = "width" value="100%">
+          </div>  
+          <div class="col">
+            Height <input type="text" class="form-control" id = "height" value="auto">
+          </div>
+        
+          <div class="col">  
+            Top <input type="text" class="form-control" id = "top" value="0px">
+          </div>
+          <div class="col">  
+            Left <input type="text" class="form-control" class="form-control" id = "left" value="0px">
+          </div> 
+          </div>
+        </div>
+      </div>
+      -->
+      <div class="cards mt-5">
+        <h2>Make Your Photo</h2>
+        <div class="twibbon mt-3">
+          <img src=""  id = "twibbon" alt="">
+          <img src=""  id = "photo" alt="">
+        </div>
+        <div class="text-center mb-5 mt-3">
+        <a data-wow-delay=".6s" href="#" id ="download" class="butn wow fadeIn" style="visibility: visible;">Download</a>
         </div>
       </div>
     </div>
-    -->
-    <div class="cards mt-5">
-      <h2>Make Your Photo</h2>
-      <div class="twibbon mt-3">
-        <img src=""  id = "twibbon" alt="">
-        <img src=""  id = "photo" alt="">
-      </div>
-      <div class="text-center mb-5">
-      <a href="#" id ="download" class="btn btn-primary mt-2">Download</a>
-      </div>
-    </div>
-    
-    
+    <div class="row mt-4">  
+  
 
     
-
- 
  
 
 <script type="text/javascript">
